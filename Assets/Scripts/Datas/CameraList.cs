@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
-[CreateAssetMenu(fileName = "SC_CameraPresets_", menuName = "Custom/CameraPresets", order = 155)]
+[CreateAssetMenu(fileName = "SC_CameraPresets", menuName = "Custom/CameraPresets", order = 155)]
 public class CameraList : ScriptableObject
 {
-    public Dictionary<string, CameraPreset> cameraPresets;
+    //YOU SHOULD USE A DICTIONARY BUT I DON'T HAVE ODIN neither the time
+    //public Dictionary<string, CameraPreset> cameraPresets;
+
+    public string[] presetsName;
+    public CameraPreset[] presets;
 }
 
 [System.Serializable]
 public struct CameraPreset
 {
-    public Vector3 position;
-    public GameObject lookAt;
-}
+    public Vector3 camPos;
+    public Quaternion camRotation;
 
-[System.Serializable]
-public struct BrickPreset
-{
-    public string tag;
-    public int armorValue;
-    public int scoreValue;
+    public TimelineAsset timeline;
 }

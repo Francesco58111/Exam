@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad980612cb012840937075b10f1e502, type: 3}
+  m_Name: SC_CameraPresets
+  m_EditorClassIdentifier: 
+  presetsName:
+  - Hero_Shoulder
+  - Friend_Shoulder
+  - Both
+  - Pan
+  presets:
+  - camPos: {x: -0.41, y: 1.59, z: 1.98}
+    camRotation: {x: 0.034, y: -156.9, z: -0.01, w: 0}
+    timeline: {fileID: 0}
+  - camPos: {x: -3.31, y: 1.63, z: -1.65}
+    camRotation: {x: -0.035, y: -295.8, z: -0.01, w: 0}
+    timeline: {fileID: 0}
+  - camPos: {x: -2.88, y: 1.79, z: 0.93}
+    camRotation: {x: 6.2, y: -229.3, z: -0.037, w: 0}
+    timeline: {fileID: 0}
+  - camPos: {x: 0, y: 0, z: 0}
+    camRotation: {x: 0, y: 0, z: 0, w: 0}
+    timeline: {fileID: 0}

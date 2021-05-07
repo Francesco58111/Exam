@@ -8,11 +8,9 @@ using System.IO;
 using System;
 using UnityEditorInternal;
 
-[CustomEditor(typeof(DialogList))]
+[CustomEditor(typeof(DialogGoupList))]
 public class DialogEditor : Editor
 {
-    DialogList myTarget;
-
     ReorderableList dialogListing;
     SerializedProperty dialogs;
 
@@ -26,7 +24,6 @@ public class DialogEditor : Editor
     private void OnEnable()
     {
         InterpreteCSV();
-        myTarget = target as DialogList;
         dialogs = serializedObject.FindProperty("dialogs");
     }
 
@@ -69,16 +66,11 @@ public class DialogEditor : Editor
 
             EditorGUILayout.LabelField("Name of the group HERE");
 
-            //for (int y = 0; y < ; y++)
-            //{
-
-            //}
-
             EditorGUILayout.EndVertical();
         }
     }
 
-    //DO NOT VERIFY IF THE FOLDER EXIST!!!
+    //DO NOT VERIFY IF THE FOLDER EXIST!!! ------ THAT'S ACTUALLY A BAD THING NOT AN ORDER ^^
     private string LoadCSV()
     {
         TextAsset csv;
